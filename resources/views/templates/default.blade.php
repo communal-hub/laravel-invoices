@@ -125,13 +125,19 @@
             .cool-gray {
                 color: #6B7280;
             }
+            .invoice-logo-img {
+                max-height: 100px;
+                max-width: 200px;
+                width: auto;
+                height: auto;
+            }
         </style>
     </head>
 
     <body>
         {{-- Header --}}
         @if($invoice->logo)
-            <img src="{{ $invoice->getLogo() }}" alt="logo" height="100">
+            <img src="{{ $invoice->getLogo() }}" alt="logo" class="invoice-logo-img">
         @endif
 
         <table class="table mt-5">
